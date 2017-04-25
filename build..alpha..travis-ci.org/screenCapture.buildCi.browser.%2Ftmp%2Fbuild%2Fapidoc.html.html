@@ -1,0 +1,484 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://algorithmique.net/">graphviz (v0.0.8)</a>
+</h1>
+<h4>Node.js interface to the GraphViz graphing tool</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.graphviz">module graphviz</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.graphviz.digraph">
+            function <span class="apidocSignatureSpan">graphviz.</span>digraph
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.graphviz.graph">
+            function <span class="apidocSignatureSpan">graphviz.</span>graph
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.graphviz.parse">
+            function <span class="apidocSignatureSpan">graphviz.</span>parse
+            <span class="apidocSignatureSpan">(file_or_script, callback, errback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">graphviz.</span>attributs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">graphviz.</span>edge</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">graphviz.</span>fs_ext</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">graphviz.</span>hash</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">graphviz.</span>node</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.graphviz.attributs">module graphviz.attributs</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.graphviz.attributs.Attributs">
+            function <span class="apidocSignatureSpan">graphviz.attributs.</span>Attributs
+            <span class="apidocSignatureSpan">(t)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.graphviz.attributs.isValid">
+            function <span class="apidocSignatureSpan">graphviz.attributs.</span>isValid
+            <span class="apidocSignatureSpan">(name, type)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.graphviz.edge">module graphviz.edge</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.graphviz.edge.Edge">
+            function <span class="apidocSignatureSpan">graphviz.edge.</span>Edge
+            <span class="apidocSignatureSpan">(graph, nodeOne, nodeTwo)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.graphviz.fs_ext">module graphviz.fs_ext</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.graphviz.fs_ext.exist">
+            function <span class="apidocSignatureSpan">graphviz.fs_ext.</span>exist
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.graphviz.graph">module graphviz.graph</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.graphviz.graph.Graph">
+            function <span class="apidocSignatureSpan">graphviz.graph.</span>Graph
+            <span class="apidocSignatureSpan">(graph, id)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.graphviz.hash">module graphviz.hash</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.graphviz.hash.Hash">
+            function <span class="apidocSignatureSpan">graphviz.hash.</span>Hash
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.graphviz.node">module graphviz.node</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.graphviz.node.Node">
+            function <span class="apidocSignatureSpan">graphviz.node.</span>Node
+            <span class="apidocSignatureSpan">(graph, id)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.graphviz" id="apidoc.module.graphviz">module graphviz</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.graphviz.digraph" id="apidoc.element.graphviz.digraph">
+        function <span class="apidocSignatureSpan">graphviz.</span>digraph
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">digraph = function (id) {
+  var graph = new Graph(null, id);
+  graph.type = 'digraph';
+  return graph;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+A basic example
+
+var util = require('util'),
+  graphviz = require('graphviz');
+
+// Create digraph G
+var g = graphviz.<span class="apidocCodeKeywordSpan">digraph</span>("G");
+
+// Add node (ID: Hello)
+var n1 = g.addNode( "Hello", {"color" : "blue"} );
+n1.set( "style", "filled" );
+
+// Add node (ID: World)
+g.addNode( "World" );
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.graphviz.graph" id="apidoc.element.graphviz.graph">
+        function <span class="apidocSignatureSpan">graphviz.</span>graph
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">graph = function (id) {
+  var graph = new Graph(null, id);
+  graph.type = 'graph';
+  return graph;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.graphviz.parse" id="apidoc.element.graphviz.parse">
+        function <span class="apidocSignatureSpan">graphviz.</span>parse
+        <span class="apidocSignatureSpan">(file_or_script, callback, errback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (file_or_script, callback, errback) {
+  if(fsExt.exist(file_or_script)) {
+    _parse(file_or_script, callback, errback);
+  } else {
+    temp.open('node-graphviz', function(err, info) {
+      fs.write(info.fd, file_or_script);
+      fs.close(info.fd, function(err) {
+        _parse(info.path, callback, errback);
+      });
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.graphviz.attributs" id="apidoc.module.graphviz.attributs">module graphviz.attributs</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.graphviz.attributs.Attributs" id="apidoc.element.graphviz.attributs.Attributs">
+        function <span class="apidocSignatureSpan">graphviz.attributs.</span>Attributs
+        <span class="apidocSignatureSpan">(t)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Attributs = function (t) {
+  this._type = t;
+  this.attributs = new Hash();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.graphviz.attributs.isValid" id="apidoc.element.graphviz.attributs.isValid">
+        function <span class="apidocSignatureSpan">graphviz.attributs.</span>isValid
+        <span class="apidocSignatureSpan">(name, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValid = function (name, type) {
+	return validateAttribut(name, type);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		
+		// Get path
+		if( type_or_options.path != undefined ) { this.gvPath = type_or_options.path; }
+		
+		// Get extra Graph Options
+		if( type_or_options.G != undefined ) {
+			for( attr in type_or_options.G ) {
+				if( gvattrs.<span class="apidocCodeKeywordSpan">isValid</span>( attr, "G" ) == false ) {
+					util.debug( "Warning : Invalid attribut `"+attr+"' for a graph" );
+				}
+	      parameters.push( "-G"+attr+"="+type_or_options.G[attr] )
+	    }
+		}
+		// Get extra Node Options
+		if( type_or_options.N != undefined ) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.graphviz.edge" id="apidoc.module.graphviz.edge">module graphviz.edge</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.graphviz.edge.Edge" id="apidoc.element.graphviz.edge.Edge">
+        function <span class="apidocSignatureSpan">graphviz.edge.</span>Edge
+        <span class="apidocSignatureSpan">(graph, nodeOne, nodeTwo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Edge = function (graph, nodeOne, nodeTwo) {
+  this.relativeGraph = graph;
+  this.nodeOne = nodeOne;
+  this.nodeTwo = nodeTwo;
+  this.attributs = new Attributs("E");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.graphviz.fs_ext" id="apidoc.module.graphviz.fs_ext">module graphviz.fs_ext</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.graphviz.fs_ext.exist" id="apidoc.element.graphviz.fs_ext.exist">
+        function <span class="apidocSignatureSpan">graphviz.fs_ext.</span>exist
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exist = function (path) {
+  try {
+    fs.statSync( path );
+  }
+  catch(e) {
+    return( false );
+  }
+  return( true );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.graphviz.graph" id="apidoc.module.graphviz.graph">module graphviz.graph</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.graphviz.graph.Graph" id="apidoc.element.graphviz.graph.Graph">
+        function <span class="apidocSignatureSpan">graphviz.graph.</span>Graph
+        <span class="apidocSignatureSpan">(graph, id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Graph = function (graph, id) {
+  this.relativeGraph = graph;
+  this.id = id;
+  this.type = 'graph';
+  this.gvPath = '';
+  this.nodes = new Hash();
+  this.edges = new Array();
+  this.clusters = new Hash();
+  if( this.relativeGraph == null ) {
+    this.graphAttributs = new Attributs("G");
+  } else {
+    this.graphAttributs = new Attributs("C");
+  }
+  this.nodesAttributs = new Attributs("N");
+  this.edgesAttributs = new Attributs("E");
+  this.use = 'dot';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.graphviz.hash" id="apidoc.module.graphviz.hash">module graphviz.hash</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.graphviz.hash.Hash" id="apidoc.element.graphviz.hash.Hash">
+        function <span class="apidocSignatureSpan">graphviz.hash.</span>Hash
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Hash = function () {
+  this.length = 0;
+  this.items = new Array();
+  for (var i = 0; i &lt; arguments.length; i += 2) {
+    if (typeof(arguments[i + 1]) != 'undefined') {
+      this.items[arguments[i]] = arguments[i + 1];
+      this.length++;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.graphviz.node" id="apidoc.module.graphviz.node">module graphviz.node</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.graphviz.node.Node" id="apidoc.element.graphviz.node.Node">
+        function <span class="apidocSignatureSpan">graphviz.node.</span>Node
+        <span class="apidocSignatureSpan">(graph, id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Node = function (graph, id) {
+  this.relativeGraph = graph;
+  this.id = id;
+  this.attributs = new Attributs("N");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
